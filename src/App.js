@@ -4,7 +4,7 @@ import TextForms from './components/TextForms';
 import React, {useState} from 'react'
 import Alerts from './components/Alerts';
 import About from './components/About';
-import { BrowserRouter as Router, Switch , Route} from "react-router-dom";
+// import { BrowserRouter as Router, Switch , Route} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -36,18 +36,18 @@ function App() {
   // }
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar title = "Text Utils" aboutText = "About Us" mode = {mode} toggleMode = {toggleMode}/>
       <Alerts alert = {alert}/>
-      <Switch>
+      {/* <Switch>
           <Route exact path="/About">
             <About /> 
           </Route>
-          <Route exact path="/"> 
+          <Route exact path="/">  */}
           <TextForms to="/" showAlert={showAlert} heading="welcome to  text converter, Enter your text" mode={mode} /> 
-          </Route>
+          {/* </Route>
       </Switch>
-    </Router>
+    </Router> */}
     </>
   );
 }
